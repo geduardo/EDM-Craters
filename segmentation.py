@@ -63,7 +63,6 @@ def run(
     from detectron2.modeling import build_model
     cfg = get_cfg()
     model = build_model(cfg)
-    print(output)
 
     # Inference with saved weigths
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))  # load the config file from the model zoo
