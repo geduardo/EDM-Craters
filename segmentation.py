@@ -60,10 +60,8 @@ def run(
     torch.multiprocessing.freeze_support()
     output = str(output)
     data= str(data)
-
-    print(weights)
     weights= str(weights)
-    print(weights)
+    
     # Directories
     save_img = not nosave
     save_txt = not nosave
