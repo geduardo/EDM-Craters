@@ -114,14 +114,6 @@ def run(
             if save_csv:
                 np.savetxt(os.path.join(output , os.path.basename(get_filename_without_extension(imageName)) +'.csv'), yi, delimiter=",")
         
-        # Compute area of the craters by counting the number of white pixels and check if the total number of pixel counted is same as the size of the image as it should be  
-        # print(p.size)
-        # number_of_white_pix = np.sum(p == 255)
-        # number_of_black_pix = np.sum(p == 0)
-        # print('NUMBER OF WHITE PIXELS:',  number_of_white_pix)
-        # print('NUMBER OF BLACK PIXELS:',  number_of_black_pix)
-        # total=number_of_black_pix+number_of_white_pix
-        # print(total)
         acount+=1
 
 def parse_opt():
@@ -134,7 +126,6 @@ def parse_opt():
     parser.add_argument('--save-img', action='store_true', help='save single crater image with mask to *.jpg')
     parser.add_argument('--save-csv', action='store_true', help='save masks to *.csv')
     parser.add_argument('--save-mask', action='store_true', help='save masks to *.jpg')
-    #parser.add_argument('--area', action='store_true', help='do not save images')
     opt = parser.parse_args()
     return opt
 
