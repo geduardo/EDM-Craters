@@ -105,13 +105,13 @@ def run(
         if save_img:
             cv2.imwrite(os.path.join(output, os.path.basename(imageName)), out.get_image()[:, :, ::-1])
 
-        # Save the matrix as a .jpg image and as a .csv file. The names are the same as the original images
+        # Save the matrix as a *.jpg image and as a *.csv file. The names are the same as the original images
         for yi in p:
             if save_mask: 
                 cv2.imwrite(os.path.join(output , 'mask_' + os.path.basename(imageName) +'.jpg'), yi)
             
             if save_csv:
-                np.savetxt(os.path.join(output , os.path.basename(get_filename_without_extension(imageName)) +'.csv'), yi, delimiter=",")
+                np.savetxt(os.path.join(output , os.path.basename(get_filename_without_extension(imageName)) + '.csv'), yi, delimiter=",")
         
         acount+=1
 
