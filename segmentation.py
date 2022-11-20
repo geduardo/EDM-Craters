@@ -46,9 +46,9 @@ def get_filename_without_extension(data):
     return filename_without_extension
 
 def run(
-        weights=ROOT / '/content/weights_detectron2/model_final.pth',               # path to the weights
-        output=ROOT / 'output',                                                     # folder where to store results
-        data=ROOT / '/content/EDM-Craters/yolov5/runs/detect/exp/crops/Crater',     # folder to the images of single craters detected through YOLO v5
+        weights=ROOT / "/content/weights_detectron2/model_final.pth",               # path to the weights
+        output=ROOT / "output",                                                     # folder where to store results
+        data=ROOT / "/content/EDM-Craters/yolov5/runs/detect/exp/crops/Crater",     # folder to the images of single craters detected through YOLO v5
         conf_thres=0.80,                                                            # confidence threshold
         view_img=False,                                                             # show single crater image with mask
         save_img=False,                                                             # save single crater image with mask to *.jpg
