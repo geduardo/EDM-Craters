@@ -90,10 +90,7 @@ def run(
         # Visualize the results: craters with mask
         if view_img:
             cv2.imshow('img',out.get_image()[:, :, ::-1])
-            cv2.waitKey(0) #CHECK THISSSSS
-
-        # Remove the extension .jpg to write on the csv file and save the mask
-        get_filename_without_extension(imageName)
+            #cv2.waitKey(0) #CHECK THISSSSS
       
         # Convert the mask to a binary image (a matrix with False and True)
         p = outputs['instances'].pred_masks.cpu().numpy()
