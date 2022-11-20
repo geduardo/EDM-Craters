@@ -80,6 +80,7 @@ def run(
     for imageName in glob.glob(data + "/*.jpg"):  
         im = cv2.imread(imageName)
         print("Im here")
+        print(imageName)
         outputs = predictor(im)
         v = Visualizer(im[:, :, ::-1],
                         metadata=test_metadata, 
@@ -98,7 +99,7 @@ def run(
         get_filename_without_extension(imageName)
       
         # Convert the mask to a binary image (a matrix with False and True)
-        p=outputs['instances'].pred_masks.cpu().numpy()
+        p = outputs['instances'].pred_masks.cpu().numpy()
 
         # Convert the binary image to a matrix with 0 and 1 (Black and White)
         p = (np.where(p >= 1, 255, p))
