@@ -117,9 +117,9 @@ def run(
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', type=str, default=ROOT / '/content/weights_detectron2/model_final.pth', help='weights path')
-    parser.add_argument('--output', type=str, default=ROOT / 'output', help='folder where to store results')
-    parser.add_argument('--data', type=str, default=ROOT / '/content/EDM-Craters/yolov5/runs/detect/exp/crops/Crater', help='folder to the images of single craters detected through YOLO v5')
+    parser.add_argument('--weights', type=str, default=ROOT / "/content/weights_detectron2/model_final.pth", help='weights path')
+    parser.add_argument('--output', type=str, default=ROOT / "output", help='folder where to store results')
+    parser.add_argument('--data', type=str, default=ROOT / "/content/EDM-Craters/yolov5/runs/detect/exp/crops/Crater", help='folder to the images of single craters detected through YOLO v5')
     parser.add_argument('--conf-thres', type=float, default=0.25, help='confidence threshold')
     parser.add_argument('--view-img', action='store_true', help='show single crater image with mask')
     parser.add_argument('--save-img', action='store_true', help='save single crater image with mask to *.jpg')
