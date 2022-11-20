@@ -78,8 +78,6 @@ def run(
     
     for imageName in glob.glob(data + "/*.jpg"):  
         im = cv2.imread(imageName)
-        print("Im here")
-        print(imageName)
         outputs = predictor(im)
         v = Visualizer(im[:, :, ::-1],
                         metadata=test_metadata, 
