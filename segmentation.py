@@ -59,7 +59,8 @@ def run(
     output = str(output)
     data= str(data)
     weights= str(weights)
-
+    print(data)
+    print(output)
     from detectron2.modeling import build_model
     cfg = get_cfg()
     model = build_model(cfg)
