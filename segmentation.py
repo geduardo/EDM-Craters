@@ -23,7 +23,6 @@ from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog
 from detectron2.config import get_cfg
 from detectron2.utils.visualizer import ColorMode
-from google.colab.patches import cv2_imshow
 
 from pathlib import Path
 import sys 
@@ -90,8 +89,8 @@ def run(
 
         # Visualize the results: craters with mask
         if view_img:
-            cv2_imshow(out.get_image()[:, :, ::-1])
-            #cv2.waitKey(0) #CHECK THISSSSS
+            cv2.imshow('img', out.get_image()[:, :, ::-1])
+            cv2.waitKey(0) #CHECK THISSSSS
       
         # Convert the mask to a binary image (a matrix with False and True)
         p = outputs['instances'].pred_masks.cpu().numpy()
