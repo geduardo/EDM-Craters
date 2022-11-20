@@ -76,9 +76,10 @@ def run(
     test_metadata = MetadataCatalog.get("my_dataset_test")
 
     acount=0
-
-    for imageName in glob.glob(os.path.join(data,'*jpg')):  
+    
+    for imageName in glob.glob(data + "/*.jpg"):  
         im = cv2.imread(imageName)
+        print("Im here")
         outputs = predictor(im)
         v = Visualizer(im[:, :, ::-1],
                         metadata=test_metadata, 
@@ -100,7 +101,7 @@ def run(
         p=outputs['instances'].pred_masks.cpu().numpy()
 
         # Convert the binary image to a matrix with 0 and 1 (Black and White)
-        p=(np.where(p>=1, 255, p))
+        p = (np.where(p >= 1, 255, p))
         
         # Save the images with the mask
         if save_img:
