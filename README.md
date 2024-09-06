@@ -15,11 +15,6 @@ The following figure describe the inference process.
 
 ![image](https://user-images.githubusercontent.com/48300381/199795208-efd46a21-6ce9-47b0-854d-74be77620d70.png)
 
-
-The inference process consists of the following steps:
-
-[TODO]
-
 ## Detection notebook
 
 Here you can find the [Colab notebook](https://colab.research.google.com/drive/169nsPOE8nSUe53McbF_OMcupCh1NNgAn?usp=sharing) to detect craters in a image.
